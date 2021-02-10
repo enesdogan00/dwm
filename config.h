@@ -119,6 +119,12 @@ static Key keys[] = {
 	{ MODKEY,                       XK_KP_Subtract,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_KP_Add,  setgaps,        {.i = +1 } },
 
+	// SCREENSHOT
+	
+    	{0, XK_Print, spawn, SHCMD("flameshot gui")},
+	{MODKEY, XK_Print, spawn, SHCMD("flameshot full -p ~/Pictures -c")},
+
+
 };
 
 
