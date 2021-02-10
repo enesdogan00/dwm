@@ -160,14 +160,14 @@ static Monitor *createmon(void);
 static void destroynotify(XEvent *e);
 static void detach(Client *c);
 static void detachstack(Client *c);
-static Monitor *dirtomon(int dir);
+//static Monitor *dirtomon(int dir);
 static void drawbar(Monitor *m);
 static void drawbars(void);
 static void enternotify(XEvent *e);
 static void expose(XEvent *e);
 static void focus(Client *c);
 static void focusin(XEvent *e);
-static void focusmon(const Arg *arg);
+//static void focusmon(const Arg *arg);
 static void focusstack(const Arg *arg);
 static Atom getatomprop(Client *c, Atom prop);
 static int getrootptr(int *x, int *y);
@@ -175,7 +175,7 @@ static long getstate(Window w);
 static int gettextprop(Window w, Atom atom, char *text, unsigned int size);
 static void grabbuttons(Client *c, int focused);
 static void grabkeys(void);
-static void incnmaster(const Arg *arg);
+//static void incnmaster(const Arg *arg);
 static void keypress(XEvent *e);
 static void killclient(const Arg *arg);
 static void manage(Window w, XWindowAttributes *wa);
@@ -201,16 +201,16 @@ static void setclientstate(Client *c, long state);
 static void setfocus(Client *c);
 static void setfullscreen(Client *c, int fullscreen);
 static void setlayout(const Arg *arg);
-static void setmfact(const Arg *arg);
+//static void setmfact(const Arg *arg);
 static void setup(void);
 static void seturgent(Client *c, int urg);
 static void showhide(Client *c);
 static void sigchld(int unused);
 static void spawn(const Arg *arg);
 static void tag(const Arg *arg);
-static void tagmon(const Arg *arg);
+//static void tagmon(const Arg *arg);
 static void tile(Monitor *);
-static void togglebar(const Arg *arg);
+//static void togglebar(const Arg *arg);
 static void togglefloating(const Arg *arg);
 static void togglesticky(const Arg *arg);
 static void toggletag(const Arg *arg);
@@ -683,7 +683,7 @@ detachstack(Client *c)
 		c->mon->sel = t;
 	}
 }
-
+/*
 Monitor *
 dirtomon(int dir)
 {
@@ -698,7 +698,7 @@ dirtomon(int dir)
 		for (m = mons; m->next != selmon; m = m->next);
 	return m;
 }
-
+*/
 void
 drawbar(Monitor *m)
 {
@@ -821,7 +821,7 @@ focusin(XEvent *e)
 	if (selmon->sel && ev->window != selmon->sel->win)
 		setfocus(selmon->sel);
 }
-
+/*
 void
 focusmon(const Arg *arg)
 {
@@ -835,7 +835,7 @@ focusmon(const Arg *arg)
 	selmon = m;
 	focus(NULL);
 }
-
+*/
 void
 focusstack(const Arg *arg)
 {
@@ -969,14 +969,14 @@ grabkeys(void)
 						True, GrabModeAsync, GrabModeAsync);
 	}
 }
-
+/*
 void
 incnmaster(const Arg *arg)
 {
 	selmon->nmaster = MAX(selmon->nmaster + arg->i, 0);
 	arrange(selmon);
 }
-
+*/
 #ifdef XINERAMA
 static int
 isuniquegeom(XineramaScreenInfo *unique, size_t n, XineramaScreenInfo *info)
@@ -1518,7 +1518,7 @@ setlayout(const Arg *arg)
 		drawbar(selmon);
 }
 
-/* arg > 1.0 will set mfact absolutely */
+/*
 void
 setmfact(const Arg *arg)
 {
@@ -1532,6 +1532,7 @@ setmfact(const Arg *arg)
 	selmon->mfact = f;
 	arrange(selmon);
 }
+*/
 
 void
 setup(void)
@@ -1666,7 +1667,7 @@ tag(const Arg *arg)
 		arrange(selmon);
 	}
 }
-
+/*
 void
 tagmon(const Arg *arg)
 {
@@ -1674,6 +1675,7 @@ tagmon(const Arg *arg)
 		return;
 	sendmon(selmon->sel, dirtomon(arg->i));
 }
+*/
 
 void
 tile(Monitor *m)
@@ -1702,7 +1704,7 @@ tile(Monitor *m)
 				ty += HEIGHT(c);
 		}
 }
-
+/*
 void
 togglebar(const Arg *arg)
 {
@@ -1711,7 +1713,7 @@ togglebar(const Arg *arg)
 	XMoveResizeWindow(dpy, selmon->barwin, selmon->wx, selmon->by, selmon->ww, bh);
 	arrange(selmon);
 }
-
+*/
 void
 togglefloating(const Arg *arg)
 {

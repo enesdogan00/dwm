@@ -27,11 +27,11 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{"Gimp",  NULL,       NULL,       1 << 8,       0,           -1 },
-    	{"Stremio", NULL, NULL, 1 << 3, 0, 0, 0, -1},
-    	{"feh", NULL, NULL, 0, 1, 0, 0, -1},
-    	{NULL, "Toolkit", NULL, 0, 1, 0, 0, -1},
-    	{"lxpolkit", NULL, NULL, 0, 1, 0, 0, -1},
-    	{"Lxpolkit", NULL, NULL, 0, 1, 0, 0, -1},
+    	{"Stremio", NULL, NULL, 1 << 3, 0, -1},
+    	{"feh", NULL, NULL, 0, 1,  -1},
+    	{NULL, "Toolkit", NULL, 0, 1, -1},
+    	{"lxpolkit", NULL, NULL, 0, 1, -1},
+    	{"Lxpolkit", NULL, NULL, 0, 1, -1},
 };
 
 /* layout(s) */
