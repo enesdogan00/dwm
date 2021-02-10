@@ -103,7 +103,7 @@ static Key keys[] = {
 
 	// APPS
 
-    	{MODKEY, XK_d, spawn, SHCMD("dmenu_run")},
+    	{MODKEY, XK_d, spawn, SHCMD("dmenu_run_history")},
     	{MODKEY, XK_e, spawn, SHCMD("pcmanfm")},
     	{MODKEY, XK_h, spawn, SHCMD("cheat.sh")},
     	{MODKEY, XK_f, spawn, SHCMD("firefox")},
