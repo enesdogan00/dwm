@@ -30,6 +30,7 @@ static const Rule rules[] = {
 	{"Gimp",  NULL,       NULL,       1 << 8,       0,           -1 },
     	{"Stremio", NULL, NULL, 1 << 3, 0, -1},
     	{"feh", NULL, NULL, 0, 1,  -1},
+    	{"Qalculate-gtk", NULL, NULL, 0, 1,  -1},
     	{NULL, "Toolkit", NULL, 0, 1, -1},
     	{"lxpolkit", NULL, NULL, 0, 1, -1},
     	{"Lxpolkit", NULL, NULL, 0, 1, -1},
