@@ -116,8 +116,8 @@ static Key keys[] = {
 
 	// GAPS
 	
-	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
-	{ MODKEY,                       XK_plus,  setgaps,        {.i = +1 } },
+	{ MODKEY,                       XK_KP_Subtract,  setgaps,        {.i = -1 } },
+	{ MODKEY,                       XK_KP_Add,  setgaps,        {.i = +1 } },
 
 };
 
