@@ -106,7 +106,7 @@ static Key keys[] = {
     	{MODKEY, XK_d, spawn, SHCMD("dmenu_run_history")},
     	{MODKEY, XK_e, spawn, SHCMD("pcmanfm")},
     	{MODKEY, XK_h, spawn, SHCMD("cheat.sh")},
-    	{MODKEY, XK_f, spawn, SHCMD("firefox")},
+    	{MODKEY, XK_f, spawn, SHCMD("librewolf")},
     	{MODKEY | ShiftMask, XK_r, spawn, SHCMD(TERMINAL " -e htop")},
 
 	// UTILS
