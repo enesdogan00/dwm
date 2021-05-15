@@ -60,6 +60,7 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 #define TERMINAL "st"
+#define BROWSER "librewolf"
 
 /* commands */
 static const char *termcmd[]  = { "st", NULL };
@@ -104,9 +105,9 @@ static Key keys[] = {
 	// APPS
 
     	{MODKEY, XK_d, spawn, SHCMD("dmenu_run_history")},
-    	{MODKEY, XK_e, spawn, SHCMD("pcmanfm")},
+    	{MODKEY, XK_e, spawn, SHCMD(TERMINAL " -e NNN_PLUG='p:preview-tabbed' nnn -a")},
     	{MODKEY, XK_h, spawn, SHCMD("cheat.sh")},
-    	{MODKEY, XK_f, spawn, SHCMD("librewolf")},
+    	{MODKEY, XK_f, spawn, SHCMD(BROWSER)},
     	{MODKEY | ShiftMask, XK_r, spawn, SHCMD(TERMINAL " -e htop")},
 
 	// UTILS
