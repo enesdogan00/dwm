@@ -60,8 +60,9 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 #define TERMINAL "st"
-#define BROWSER "librewolf"
+#define BROWSER "browser"
 
+#include <X11/XF86keysym.h>
 /* commands */
 static const char *termcmd[]  = { "st", NULL };
 
@@ -93,6 +94,8 @@ static Key keys[] = {
     	{MODKEY | ShiftMask, 		XK_z,      spawn, 	  SHCMD("playerctl play-pause")},
     	{MODKEY, XK_Up, spawn, SHCMD("amixer sset 'Master' 5%+")},
     	{MODKEY, XK_Down, spawn, SHCMD("amixer sset 'Master' 5%-")},
+    	{0, XF86XK_AudioRaiseVolume, spawn, SHCMD("amixer sset 'Master' 5%+")},
+    	{0, XF86XK_AudioLowerVolume, spawn, SHCMD("amixer sset 'Master' 5%-")},
     	{MODKEY | ShiftMask, XK_Left, spawn, SHCMD("playerctl previous")},
     	{MODKEY | ShiftMask, XK_Right, spawn, SHCMD("playerctl next")},
     	{MODKEY, XK_Left, spawn, SHCMD("mocp -r")},
@@ -100,15 +103,14 @@ static Key keys[] = {
     	{MODKEY, XK_x, spawn, SHCMD("medcontrol")},
     	{MODKEY, XK_p, spawn, SHCMD("stremio")},
     	{MODKEY, XK_m, spawn, SHCMD(TERMINAL " -e mocp")},
-    	{MODKEY | ShiftMask, XK_m, spawn, SHCMD("cmuscontrol")},
 
 	// APPS
 
     	{MODKEY, XK_d, spawn, SHCMD("dmenu_run_history")},
-    	{MODKEY, XK_e, spawn, SHCMD(TERMINAL " -e NNN_PLUG='p:preview-tabbed' nnn -a")},
+    	{MODKEY, XK_e, spawn, SHCMD(TERMINAL " nnn -a")},
     	{MODKEY, XK_h, spawn, SHCMD("cheat.sh")},
     	{MODKEY, XK_f, spawn, SHCMD(BROWSER)},
-    	{MODKEY | ShiftMask, XK_r, spawn, SHCMD(TERMINAL " -e htop")},
+    	{MODKEY | ShiftMask, XK_r, spawn, SHCMD(TERMINAL " htop")},
 
 	// UTILS
 	
@@ -126,6 +128,9 @@ static Key keys[] = {
     	{0, XK_Print, spawn, SHCMD("flameshot gui")},
 	{MODKEY, XK_Print, spawn, SHCMD("flameshot full -p ~/Pictures -c")},
 
+	// BACKLIGHT
+    	{0, XF86XK_MonBrightnessUp, spawn, SHCMD("xbacklight -inc 10")},
+    	{0, XF86XK_MonBrightnessDown, spawn, SHCMD("xbacklight -dec 10")},
 
 };
 
