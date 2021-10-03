@@ -91,7 +91,7 @@ static Key keys[] = {
 	
 	// MEDIA
 	
-    	{MODKEY, 			XK_z, 	   spawn,         SHCMD("mocp -G")},
+    	{MODKEY, 			XK_z, 	   spawn,         SHCMD("playerctl play-pause --player=spotify")},
     	{MODKEY | ShiftMask, 		XK_z,      spawn, 	  SHCMD("playerctl play-pause")},
     	{MODKEY, XK_Up, spawn, SHCMD("amixer sset 'Master' 5%+")},
     	{MODKEY, XK_Down, spawn, SHCMD("amixer sset 'Master' 5%-")},
@@ -99,11 +99,11 @@ static Key keys[] = {
     	{0, XF86XK_AudioLowerVolume, spawn, SHCMD("amixer sset 'Master' 5%-")},
     	{MODKEY | ShiftMask, XK_Left, spawn, SHCMD("playerctl previous")},
     	{MODKEY | ShiftMask, XK_Right, spawn, SHCMD("playerctl next")},
-    	{MODKEY, XK_Left, spawn, SHCMD("mocp -r")},
-    	{MODKEY, XK_Right, spawn, SHCMD("mocp -f")},
+    	{MODKEY , XK_Left,  spawn, SHCMD("playerctl previous --player=spotify")},
+    	{MODKEY , XK_Right, spawn, SHCMD("playerctl next --player=spotify")},
     	{MODKEY, XK_x, spawn, SHCMD("medcontrol")},
     	{MODKEY, XK_p, spawn, SHCMD("stremio")},
-    	{MODKEY, XK_m, spawn, SHCMD(TERMINAL " -e mocp")},
+    	{MODKEY, XK_m, spawn, SHCMD("spotify")},
 
 	// APPS
 
