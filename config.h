@@ -71,7 +71,7 @@ static Key keys[] = {
 	{ MODKEY,	                XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY,                       XK_w,      killclient,     {0} },
+	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_space,  zoom,      {0} },
@@ -110,8 +110,6 @@ static Key keys[] = {
     	{MODKEY, XK_d, spawn, SHCMD("dmenu_run_history")},
     	{MODKEY, XK_e, spawn, SHCMD(TERMINAL " nnn -a")},
     	{MODKEY, XK_h, spawn, SHCMD("cheat.sh")},
-    	{MODKEY, XK_f, spawn, SHCMD(BROWSER)},
-    	{MODKEY | ShiftMask, XK_r, spawn, SHCMD(TERMINAL " htop")},
 
 	// UTILS
 	
