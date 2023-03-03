@@ -104,6 +104,7 @@ static Key keys[] = {
     	{MODKEY, XK_x, spawn, SHCMD("medcontrol")},
     	{MODKEY, XK_p, spawn, SHCMD("stremio")},
     	{MODKEY, XK_m, spawn, SHCMD("spotify")},
+    	{MODKEY, XK_f, spawn, SHCMD(BROWSER)},
 
 	// APPS
 
